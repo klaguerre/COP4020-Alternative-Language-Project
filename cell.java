@@ -57,5 +57,5 @@ public class cell {
     public void setDisplaySize(String displaySize) { this.displaySize = displaySize; }
     public void setDisplayResolution(String displayResolution) { this.displayResolution = displayResolution; }
     public void setFeaturesSensors(String featuresSensors) { this.featuresSensors = featuresSensors; }
-    public void setPlatforms(String platformOs) { this.platforms = platforms; }
+    public void setPlatforms(String platforms) { this.platforms = platforms; }
 }
