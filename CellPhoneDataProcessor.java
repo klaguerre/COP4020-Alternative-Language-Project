@@ -15,7 +15,8 @@ public class CellPhoneDataProcessor {
                 String oem = nextLine[0].equals("-") ? null : nextLine[0];
                 String model = nextLine[1].equals("-") ? null : nextLine[1];
                 Integer launchAnnounced = extractYear(nextLine[2]);
-                String launchStatus = nextLine[3].matches("Discontinued|Cancelled") ? nextLine[3] : extractYear(nextLine[3]).toString();
+                String launchStatus = nextLine[3].matches("Discontinued|Cancelled") ? nextLine[3]
+                        : extractYear(nextLine[3]).toString();
                 String bodyDimensions = nextLine[4].equals("-") ? null : nextLine[4];
                 Float bodyWeight = extractWeight(nextLine[5]);
                 String bodySim = nextLine[6].equalsIgnoreCase("No") ? null : nextLine[6];
@@ -25,7 +26,8 @@ public class CellPhoneDataProcessor {
                 String featuresSensors = nextLine[10].equals("V1") ? null : nextLine[10];
                 String platforms = extractOs(nextLine[11]);
 
-                cell cell = new cell(oem, model, launchAnnounced, launchStatus, bodyDimensions, bodyWeight, bodySim, displayType, displaySize, displayResolution, featuresSensors, platforms);
+                cell cell = new cell(oem, model, launchAnnounced, launchStatus, bodyDimensions, bodyWeight, bodySim,
+                        displayType, displaySize, displayResolution, featuresSensors, platforms);
                 phoneMap.put(oem + " " + model, cell);
             }
         } catch (Exception e) {
